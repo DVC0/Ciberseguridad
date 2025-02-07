@@ -1,0 +1,89 @@
+:root {
+  background-color: lightcyan;
+  padding: 1%;
+  margin: 1%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+div > div {
+  transition: 0.5s;
+  width: 200px;
+  height: 310px;
+}
+
+div > div:hover {
+  transform: scale(1.2);
+}
+
+img {
+  box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
+  border-radius: 5%;
+  width: 200px;
+  height: 200px;
+}
+
+.nav {
+  padding-bottom: 1%;
+}
+
+a {
+  color: black;
+  font-size: larger;
+}
+
+.buscador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1%;
+}
+
+.buscador > input {
+  flex-basis: 75%;
+  padding: 0.5em;
+}
+
+.buscador > button {
+  flex-basis: 25%;
+  background-color: white;
+  padding: 0.5em;
+}
+
+h1,
+h2 {
+  font-family: sans-serif;
+}
+
+footer {
+  border: 2px solid black;
+}
+
+.productos {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding-top: 5%;
+  justify-items: center;
+}
+
+@media (min-width: 500px) {
+  main {
+    display: grid;
+    grid-template-areas: "buscador productos productos"
+                         "buscador productos productos"
+                         "buscador productos productos"
+                         "buscador article article";
+  }
+  .productos {
+    grid-area: productos;
+  }
+  .buscador {
+    grid-area: buscador;
+    align-items: start;
+  }
+  .article {
+    grid-area: article;
+  }
+}
+
